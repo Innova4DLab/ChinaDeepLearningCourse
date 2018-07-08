@@ -11775,7 +11775,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="udlap.jpg" width="300" /></p>
+<p><img src="logos.jpg" width="700" /></p>
 <h1 id="Classical-Machine-Learning-example">Classical Machine Learning example<a class="anchor-link" href="#Classical-Machine-Learning-example">&#182;</a></h1><p>The purpose of this example is to demonstrate the steps associated to a supervised learning approach applied to a classification task.</p>
 <p>Example main features:</p>
 <ol>
@@ -11803,10 +11803,10 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Import Pandas package which help us to work with a structured dataset easily</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Import Pandas package which help us to work with a structured dataset easily</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="c1">#For displaying a Pandas table in the jupyter notebook</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Markdown</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Markdown</span>
 <span class="c1">#Read Microsoft Excel file</span>
 <span class="n">excel</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">ExcelFile</span><span class="p">(</span><span class="s2">&quot;2015_weibodata.xlsx&quot;</span><span class="p">)</span>
 <span class="c1">#Load the dataset from the file as a Pandas table (called also dataframe)</span>
@@ -12005,7 +12005,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Get some basic information from the table</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Get some basic information from the table</span>
 <span class="n">data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
 
@@ -12081,10 +12081,10 @@ memory usage: 42.7+ MB
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Obtain a random row subset of size n from the original table </span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Obtain a random row subset of size n from the original table </span>
 <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">27000</span><span class="p">)</span>
 <span class="c1">#Reset table subset indices (start from 0 to n-1) otherwise the table keeps original ones</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12106,7 +12106,7 @@ memory usage: 42.7+ MB
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Eliminate columns that don&#39;t have any meaningful information</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Eliminate columns that don&#39;t have any meaningful information</span>
 <span class="n">cleanData</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">[:</span><span class="o">-</span><span class="mi">14</span><span class="p">]]</span>
 <span class="c1">#Show again the information about the table</span>
 <span class="n">cleanData</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -12311,7 +12311,7 @@ memory usage: 3.7+ MB
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%%</span><span class="k">capture</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">capture</span>
 #Jupyter notebook command that disables the Python output for this code box
 #Transform province and city columns from string to integer 
 cleanData[&#39; `province`&#39;]=cleanData[&#39; `province`&#39;].str[2:-1].apply(int)
@@ -12328,7 +12328,7 @@ cleanData[&#39; `city`&#39;]=cleanData[&#39; `city`&#39;].str[2:-1].apply(int)
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Obtain the first five rows of the table</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Obtain the first five rows of the table</span>
 <span class="n">cleanData</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
@@ -12497,13 +12497,13 @@ cleanData[&#39; `city`&#39;]=cleanData[&#39; `city`&#39;].str[2:-1].apply(int)
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Get a column header list</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Get a column header list</span>
 <span class="n">columNames</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">cleanData</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
 <span class="c1">#For each column (except the text column) obtain the different values and the number of rows associated</span>
 <span class="k">for</span> <span class="n">names</span> <span class="ow">in</span> <span class="n">columNames</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
-    <span class="k">print</span> <span class="s2">&quot;-----------------------------&quot;</span>
-    <span class="k">print</span> <span class="n">cleanData</span><span class="p">[</span><span class="n">names</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
-    <span class="k">print</span> <span class="s2">&quot;-----------------------------&quot;</span>
+    <span class="nb">print</span> <span class="s2">&quot;-----------------------------&quot;</span>
+    <span class="nb">print</span> <span class="n">cleanData</span><span class="p">[</span><span class="n">names</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+    <span class="nb">print</span> <span class="s2">&quot;-----------------------------&quot;</span>
 </pre></div>
 
 </div>
@@ -13293,8 +13293,8 @@ Name:  `comments_count`, dtype: int64
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Show the number of rows associated to each gender</span>
-<span class="k">print</span> <span class="n">cleanData</span><span class="p">[</span><span class="s1">&#39; `gender`&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Show the number of rows associated to each gender</span>
+<span class="nb">print</span> <span class="n">cleanData</span><span class="p">[</span><span class="s1">&#39; `gender`&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -13336,10 +13336,10 @@ Name:  `gender`, dtype: int64
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Command used to see the plot inside the Jupyter notebook</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Command used to see the plot inside the Jupyter notebook</span>
 <span class="c1">#https://matplotlib.org/gallery/pie_and_polar_charts/pie_features.html#sphx-glr-gallery-pie-and-polar-charts-pie-features-py</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="c1">#Labels associated to each gender</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span>
 <span class="c1">#Number of rows related to each gender</span>
@@ -13348,7 +13348,7 @@ Name:  `gender`, dtype: int64
 <span class="n">fig1</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="c1">#Plot the figure</span>
 <span class="n">ax1</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">sizes</span><span class="p">,</span> <span class="n">explode</span><span class="o">=</span><span class="n">explode</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.1f%%</span><span class="s1">&#39;</span><span class="p">,</span>
-        <span class="n">shadow</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+        <span class="n">shadow</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
 <span class="n">ax1</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>  <span class="c1"># Equal aspect ratio ensures that pie is drawn as a circle.</span>
 <span class="c1">#Show the figure</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -13395,9 +13395,9 @@ Name:  `gender`, dtype: int64
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Command used to see the plot inside the Jupyter notebook</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Command used to see the plot inside the Jupyter notebook</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="c1">#Plot a histogram for each table column</span>
 <span class="n">cleanData</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
 </pre></div>
@@ -13483,7 +13483,7 @@ Name:  `gender`, dtype: int64
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#According to the attributes nature and type, select the most representative ones as features for a classification process</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#According to the attributes nature and type, select the most representative ones as features for a classification process</span>
 <span class="n">FeatureCols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39; `year`&#39;</span><span class="p">,</span> <span class="s1">&#39; `month`&#39;</span><span class="p">,</span> <span class="s1">&#39; `day`&#39;</span><span class="p">,</span> <span class="s1">&#39; `hour`&#39;</span><span class="p">,</span> <span class="s1">&#39; `minute`&#39;</span><span class="p">,</span><span class="s1">&#39; `province`&#39;</span><span class="p">,</span> <span class="s1">&#39; `city`&#39;</span><span class="p">,</span> 
              <span class="s1">&#39; `statuses_count`&#39;</span><span class="p">,</span> <span class="s1">&#39; `followers_count`&#39;</span><span class="p">,</span> <span class="s1">&#39; `friends_count`&#39;</span><span class="p">,</span> <span class="s1">&#39; `reposts_count`&#39;</span><span class="p">,</span>
              <span class="s1">&#39; `comments_count`&#39;</span><span class="p">]</span>
@@ -13621,7 +13621,7 @@ Name:  `gender`, dtype: int64
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Select the classification attribute (what we want to predict from the features)             </span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Select the classification attribute (what we want to predict from the features)             </span>
 <span class="n">labelCol</span><span class="o">=</span><span class="s1">&#39; `gender`&#39;</span>
 <span class="c1">#Subset for each feature their respective label</span>
 <span class="c1">#Transform the lable to a string variable</span>
@@ -13677,15 +13677,15 @@ Name:  `gender`, dtype: object</pre>
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Import Kfold function from the scikit-learn  which is Machine learning package for Python</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Import Kfold function from the scikit-learn  which is Machine learning package for Python</span>
 <span class="c1">#http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">KFold</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">KFold</span>
 <span class="c1"># Define the split - into five folds using a random parameter to get different partitions</span>
-<span class="n">kf</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">shuffle</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">kf</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="c1"># Returns the number of splitting iterations in the cross-validation process</span>
 <span class="n">kf</span><span class="o">.</span><span class="n">get_n_splits</span><span class="p">(</span><span class="n">featuresDataset</span><span class="p">)</span>
 <span class="c1">#Print the object to ensure that everything works fine</span>
-<span class="k">print</span><span class="p">(</span><span class="n">kf</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">kf</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13737,13 +13737,13 @@ Name:  `gender`, dtype: object</pre>
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Import Kfold function from the scikit-learn which is Machine learning package for Python</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Import Kfold function from the scikit-learn which is Machine learning package for Python</span>
 <span class="c1">#http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">KFold</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">KFold</span>
 <span class="n">num</span><span class="o">=</span><span class="mi">1</span>
 <span class="k">for</span> <span class="n">train_indices</span><span class="p">,</span> <span class="n">test_indices</span> <span class="ow">in</span> <span class="n">kf</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">featuresDataset</span><span class="p">):</span>
     <span class="c1">#Print the first ten indices associated to the features</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Fold &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;---&gt; Train: </span><span class="si">%s</span><span class="s2"> | test: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">train_indices</span><span class="p">[:</span><span class="mi">10</span><span class="p">],</span> <span class="n">test_indices</span><span class="p">[:</span><span class="mi">10</span><span class="p">]))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fold &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;---&gt; Train: </span><span class="si">%s</span><span class="s2"> | test: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">train_indices</span><span class="p">[:</span><span class="mi">10</span><span class="p">],</span> <span class="n">test_indices</span><span class="p">[:</span><span class="mi">10</span><span class="p">]))</span>
     <span class="n">num</span><span class="o">+=</span><span class="mi">1</span>
 </pre></div>
 
@@ -13788,13 +13788,13 @@ Fold 5---&gt; Train: [ 1  2  3  5  6  7  8  9 10 11] | test: [ 0  4 13 16 20 27 
 <div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Import a Support Vector Machine (SVM) classifier from the scikit-learn package</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Import a Support Vector Machine (SVM) classifier from the scikit-learn package</span>
 <span class="c1">#http://scikit-learn.org/stable/modules/svm.html</span>
-<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">svm</span>
-<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">LinearSVC</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">svm</span>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="k">import</span> <span class="n">LinearSVC</span>
 <span class="n">clf1</span><span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">LinearSVC</span><span class="p">()</span>
 <span class="c1">#Show classifier attributes</span>
-<span class="k">print</span> <span class="n">clf1</span>
+<span class="nb">print</span> <span class="n">clf1</span>
 </pre></div>
 
 </div>
@@ -13828,12 +13828,12 @@ Fold 5---&gt; Train: [ 1  2  3  5  6  7  8  9 10 11] | test: [ 0  4 13 16 20 27 
 <div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Import a logistic regression classifier from the scikit-learn package</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Import a logistic regression classifier from the scikit-learn package</span>
 <span class="c1">#http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html</span>
-<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">linear_model</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">linear_model</span>
 <span class="n">clf2</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LogisticRegression</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mf">1e5</span><span class="p">)</span>
 <span class="c1">#Show classifier attributes</span>
-<span class="k">print</span> <span class="n">clf2</span>
+<span class="nb">print</span> <span class="n">clf2</span>
 </pre></div>
 
 </div>
@@ -13867,12 +13867,12 @@ Fold 5---&gt; Train: [ 1  2  3  5  6  7  8  9 10 11] | test: [ 0  4 13 16 20 27 
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Import a Multinomial Naive Bayes classifier from the scikit-learn package</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Import a Multinomial Naive Bayes classifier from the scikit-learn package</span>
 <span class="c1">#http://scikit-learn.org/stable/modules/naive_bayes.html</span>
-<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">MultinomialNB</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="k">import</span> <span class="n">MultinomialNB</span>
 <span class="n">clf3</span> <span class="o">=</span> <span class="n">MultinomialNB</span><span class="p">()</span>
 <span class="c1">#Show classifier attributes</span>
-<span class="k">print</span> <span class="n">clf3</span>
+<span class="nb">print</span> <span class="n">clf3</span>
 </pre></div>
 
 </div>
@@ -13912,9 +13912,9 @@ Fold 5---&gt; Train: [ 1  2  3  5  6  7  8  9 10 11] | test: [ 0  4 13 16 20 27 
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Import the mathematical package used for python to obtain the average accuracy of the results provided for each fold</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Import the mathematical package used for python to obtain the average accuracy of the results provided for each fold</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">classification_report</span>
 <span class="c1">#Append the classifiers into a Python list for evaluation each of them</span>
 <span class="n">classifiers</span><span class="o">=</span><span class="p">[</span><span class="n">clf1</span><span class="p">,</span><span class="n">clf2</span><span class="p">,</span><span class="n">clf3</span><span class="p">]</span>
 <span class="c1">#Append the classifiers name for showing the results</span>
@@ -13923,7 +13923,7 @@ Fold 5---&gt; Train: [ 1  2  3  5  6  7  8  9 10 11] | test: [ 0  4 13 16 20 27 
 <span class="k">for</span> <span class="n">classifier</span><span class="p">,</span><span class="n">name</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">classifiers</span><span class="p">,</span><span class="n">classifierType</span><span class="p">):</span>
     <span class="n">num</span><span class="o">=</span><span class="mi">1</span>
     <span class="n">results</span><span class="o">=</span><span class="p">[]</span>
-    <span class="k">print</span> <span class="s2">&quot;Classifier name: &quot;</span><span class="o">+</span><span class="n">name</span>
+    <span class="nb">print</span> <span class="s2">&quot;Classifier name: &quot;</span><span class="o">+</span><span class="n">name</span>
     <span class="k">for</span> <span class="n">train</span><span class="p">,</span> <span class="n">test</span> <span class="ow">in</span> <span class="n">kf</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">featuresDataset</span><span class="p">):</span>
         <span class="c1">#http://scikit-learn.org/stable/tutorial/statistical_inference/supervised_learning.html</span>
         <span class="c1">#The fit function take as parameters the features and labels samples generated for each training fold</span>
@@ -13931,12 +13931,12 @@ Fold 5---&gt; Train: [ 1  2  3  5  6  7  8  9 10 11] | test: [ 0  4 13 16 20 27 
                       <span class="c1">#The score function take as parameters the features and labels samples generated for each test fold</span>
                       <span class="n">labelsDataset</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">train</span><span class="p">])</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">featuresDataset</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">test</span><span class="p">],</span>
                                                  <span class="n">labelsDataset</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">test</span><span class="p">])</span>
-        <span class="k">print</span>  <span class="s2">&quot;Fold: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; accuracy: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        <span class="nb">print</span>  <span class="s2">&quot;Fold: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; accuracy: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
         <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
         <span class="n">num</span><span class="o">+=</span><span class="mi">1</span>
     <span class="c1">#Obtain the average acuraccy of each classifier    </span>
     <span class="c1">#https://docs.scipy.org/doc/numpy/reference/generated/numpy.average.html    </span>
-    <span class="k">print</span> <span class="s2">&quot;Average accuracy: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">results</span><span class="p">))</span>    
+    <span class="nb">print</span> <span class="s2">&quot;Average accuracy: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">results</span><span class="p">))</span>    
 </pre></div>
 
 </div>
