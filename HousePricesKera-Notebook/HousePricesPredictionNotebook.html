@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>HousePricesPredictionNotebook</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>HousePricesPredictionNotebook</title><script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/5DD3F63D-970D-4D48-B55F-153B7BA91FB7/main.js" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -12043,7 +12043,7 @@ The following code load the numerical properties and the according labels. The v
 <span class="n">train_data</span> <span class="o">/=</span> <span class="n">std</span> <span class="c1"># For each element inside the train array then divide the std value.</span>
 
 <span class="n">test_data</span> <span class="o">-=</span> <span class="n">mean</span> <span class="c1"># For each element inside the train array then substract the mean value.</span>
-<span class="n">test_data</span> <span class="o">/=</span> <span class="n">std</span> <span class="c1"># For each element inside the train array then divide the std value.</span>
+<span class="n">test_data</span> <span class="o">/=</span> <span class="n">std</span> <span class="c1"># For each element inside the train array then divide by the std value.</span>
 </pre></div>
 
 </div>
@@ -12088,7 +12088,7 @@ The following code load the numerical properties and the according labels. The v
 
 <span class="c1"># Because we will need to instantiate</span>
 <span class="c1"># the same model multiple times,</span>
-<span class="c1"># we use a function to construct it.</span>
+<span class="c1"># we define a function to construct it and we will use it for in the validation stage</span>
 <span class="k">def</span> <span class="nf">build_model</span><span class="p">():</span>
     <span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span> <span class="c1"># Declare de Sequential model (linear stack of layers), which is the most common way by far.</span>
     
@@ -12120,7 +12120,7 @@ The following code load the numerical properties and the according labels. The v
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Note:</p>
 <ul>
-<li>The previous code compile the network with the mse loss function—mean squared error, the square of the difference between the predictions and the targets. This is a widely used loss function for regression problems.</li>
+<li>The previous code compiles the network with the mse loss function—mean squared error, the square of the difference between the predictions and the targets. This is a widely used loss function for regression problems.</li>
 <li>The code also setup the network to monitor the mean absolute error (MAE) metric during training. It’s the absolute value of the difference between the predictions and the targets. For instance, an MAE of 0.5 on this problem would mean your predictions are off by $500 on average.</li>
 </ul>
 <p>The network ends with a single unit and no activation function (it will be a linear layer) so the network is free to predict values in any range. This is a typical setup for scalar regression (a regression where you’re trying to predict a single continuous value).</p>
